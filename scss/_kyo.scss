@@ -1,0 +1,23 @@
+.home-page
+{
+  max-height: 90vh;
+  ul
+  {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    &.social-btns
+    {
+      position: absolute;
+      top: 3%;
+      right: 3%;
+      float: right;
+    }
+  }
+  li
+  {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2% 5%;
+  }
+}

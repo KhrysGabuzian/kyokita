@@ -296,7 +296,8 @@ body {
   perspective-origin: 50% 40%; }
 
 .reveal .slides > section {
-  -ms-perspective: 600px; }
+  -ms-perspective: 600px;
+  max-height: 90vh; }
 
 .reveal .slides > section,
 .reveal .slides > section > section {
@@ -335,7 +336,8 @@ body {
 .reveal.center,
 .reveal.center .slides,
 .reveal.center .slides section {
-  min-height: 0 !important; }
+  min-height: 0 !important;
+  max-height: 90vh; }
 
 /* Don't allow interaction with invisible slides */
 .reveal .slides > section.future,
@@ -1373,5 +1375,22 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #42affa; }
+
+/*@import "social-button";*/
+.home-page {
+  max-height: 90vh; }
+  .home-page ul {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+    .home-page ul.social-btns {
+      position: absolute;
+      top: 3%;
+      right: 3%;
+      float: right; }
+  .home-page li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2% 5%; }
 
 /*# sourceMappingURL=style.css.map */
