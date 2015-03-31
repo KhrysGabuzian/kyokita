@@ -11,26 +11,6 @@
  * RESET STYLES
  *********************************************/
 
-html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal iframe,
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal blockquote, .reveal pre,
-.reveal a, .reveal abbr, .reveal acronym, .reveal address, .reveal big, .reveal cite, .reveal code,
-.reveal del, .reveal dfn, .reveal em, .reveal img, .reveal ins, .reveal kbd, .reveal q, .reveal s, .reveal samp,
-.reveal small, .reveal strike, .reveal strong, .reveal sub, .reveal sup, .reveal tt, .reveal var,
-.reveal b, .reveal u, .reveal center,
-.reveal dl, .reveal dt, .reveal dd, .reveal ol, .reveal ul, .reveal li,
-.reveal fieldset, .reveal form, .reveal label, .reveal legend,
-.reveal table, .reveal caption, .reveal tbody, .reveal tfoot, .reveal thead, .reveal tr, .reveal th, .reveal td,
-.reveal article, .reveal aside, .reveal canvas, .reveal details, .reveal embed,
-.reveal figure, .reveal figcaption, .reveal footer, .reveal header, .reveal hgroup,
-.reveal menu, .reveal nav, .reveal output, .reveal ruby, .reveal section, .reveal summary,
-.reveal time, .reveal mark, .reveal audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 
 .reveal article, .reveal aside, .reveal details, .reveal figcaption, .reveal figure,
 .reveal footer, .reveal header, .reveal hgroup, .reveal menu, .reveal nav, .reveal section {
@@ -157,35 +137,6 @@ body {
 	}
 }
 
-.reveal .slides section .fragment.highlight-red,
-.reveal .slides section .fragment.highlight-current-red,
-.reveal .slides section .fragment.highlight-green,
-.reveal .slides section .fragment.highlight-current-green,
-.reveal .slides section .fragment.highlight-blue,
-.reveal .slides section .fragment.highlight-current-blue {
-	opacity: 1;
-	visibility: visible;
-}
-	.reveal .slides section .fragment.highlight-red.visible {
-		color: #ff2c2d
-	}
-	.reveal .slides section .fragment.highlight-green.visible {
-		color: #17ff2e;
-	}
-	.reveal .slides section .fragment.highlight-blue.visible {
-		color: #1b91ff;
-	}
-
-.reveal .slides section .fragment.highlight-current-red.current-fragment {
-	color: #ff2c2d
-}
-.reveal .slides section .fragment.highlight-current-green.current-fragment {
-	color: #17ff2e;
-}
-.reveal .slides section .fragment.highlight-current-blue.current-fragment {
-	color: #1b91ff;
-}
-
 
 /*********************************************
  * DEFAULT ELEMENT STYLES
@@ -200,23 +151,6 @@ body {
 .reveal iframe {
 	z-index: 1;
 }
-
-/** Prevents layering issues in certain browser/transition combinations */
-.reveal a {
-	position: relative;
-}
-
-.reveal .stretch {
-	max-width: none;
-	max-height: none;
-}
-
-.reveal pre.stretch code {
-	height: 100%;
-	max-height: 100%;
-	box-sizing: border-box;
-}
-
 
 /*********************************************
  * CONTROLS
@@ -382,7 +316,7 @@ body {
 	display: none;
 	position: absolute;
 	width: 100%;
-	padding: 20px 0px;
+	padding: 35px 0 20px 0px;
 
 	z-index: 10;
 	transform-style: preserve-3d;
@@ -424,7 +358,9 @@ body {
 .reveal.center .slides,
 .reveal.center .slides section {
 	min-height: 0 !important;
-    max-height: 90vh;
+    max-height: 95vh;
+    height: 95vh;
+    max-width: 100vw;
 }
 
 /* Don't allow interaction with invisible slides */
@@ -870,8 +806,8 @@ body {
 	.reveal .slide-background {
 		display: none;
 		position: absolute;
-		width: 100%;
-		height: 100%;
+		width: 100vw;
+		height: 100vh;
 		opacity: 0;
 		visibility: hidden;
 
