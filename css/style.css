@@ -1486,22 +1486,31 @@ button {
   vertical-align: top;
   width: 48%; }
 
-.contact h2 {
-  text-transform: uppercase; }
+.contact .border-block {
+  position: relative;
+  height: 30vh;
+  padding: 4%; }
+  .contact .border-block h2 {
+    text-transform: uppercase;
+    position: absolute;
+    top: -30px;
+    left: 32%;
+    background-color: white;
+    padding: 10px;
+    font-size: 1.5em; }
+  .contact .border-block p {
+    font-size: 1.3em;
+    line-height: 1.5em; }
 .contact .block-left {
   color: #000;
-  padding: 2%; }
-  .contact .block-left p {
-    font-size: 1.5em;
-    line-height: 1.7em;
-    border: 1px solid #000000;
-    padding: 55px 5px;
-    margin-bottom: 25%; }
+  padding: 4%;
+  text-align: left; }
 .contact address {
   padding: 2%;
-  text-align: center;
   font-size: 1.2em;
   color: #4d4d4d; }
+  .contact address img {
+    margin: 0 6px; }
   .contact address > * {
     display: inline-block;
     vertical-align: middle; }
@@ -1523,14 +1532,22 @@ button {
     vertical-align: middle;
     margin: 0 10px; }
 
+.block-right {
+  padding: 20px 0; }
+
 #map-canvas {
   width: 40vw;
-  height: 60vh; }
+  height: 50vh; }
 
 @media (min-width: 1200px) {
   .ch-grid li {
     width: 220px;
     height: 220px; } }
+@media (max-width: 800px) {
+  .ch-grid li {
+    width: 180px;
+    height: 180px;
+    border-width: 3px; } }
 .ch-img-1 {
   background-image: url(../images/team/DSC_0271.jpg); }
 
