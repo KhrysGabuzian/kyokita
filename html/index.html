@@ -16,7 +16,18 @@
 
 		<link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/social-circles.css">
-
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(48.8698857, 2.3463124),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+            }
+        </script>
 
 	</head>
 
@@ -134,13 +145,27 @@
                         </ul>
                     </section>
                     <section class="contact">
-
+                        <h2>Contactez nous</h2>
+                        <div class="block-left">
+                            <p>Vous voulez discuter de votre projet, avoir une démonstration de nos projets... Rencontrons-nous dans nos locaux</p>
+                            <a class="email-send" href="mailto:contact@kyokita.com"><img src="../images/mail.png" width="50"><span>contact@kyokita.com</span></a>
+                            <a class="phone" href="tel:+33101010101"><img src="../images/phone.png" width="50"><span>01 01 01 01 01</span></a>
+                        </div>
+                        <div class="block-right">
+                            <div id="map-canvas"></div>
+                            <address>
+                               <img src="../images/pin.png" width="50"> 28 rue du Sentier, 75003 PARIS
+                            </address>
+                        </div>
                     </section>
 				</section>
 
 			</div>
 
 		</div>
+
+
+
 
 		<!--<script src="lib/js/head.min.js"></script>-->
 		<script src="../js/reveal.js"></script>
