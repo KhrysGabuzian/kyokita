@@ -1457,7 +1457,7 @@
 			scale = Math.min( scale, config.maxScale );
 
 			// Don't apply any scaling styles if scale is 1
-			if( scale === 1 ) {
+/*			if( scale === 1 ) {
 				dom.slides.style.zoom = '';
 				dom.slides.style.left = '';
 				dom.slides.style.top = '';
@@ -1478,7 +1478,7 @@
 					dom.slides.style.right = 'auto';
 					transformElement( dom.slides, 'translate(-50%, -50%) scale('+ scale +')' );
 				}
-			}
+			}*/
 
 			// Select all slides, vertical and horizontal
 			var slides = toArray( dom.wrapper.querySelectorAll( SLIDES_SELECTOR ) );
