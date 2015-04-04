@@ -1908,6 +1908,12 @@ button {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px;
-  height: 100px; }
+  height: 30vh;
+  padding: 3vh 0px;
+  margin: 2vh; }
+  .owl-carousel .owl-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px; }
 
 /*# sourceMappingURL=style.css.map */
