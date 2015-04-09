@@ -237,7 +237,51 @@ button
 }
 
 
+.clients-list
+{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  margin-top: 10vh;
+
+  .item
+  {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    -webkit-align-items: center;
+    align-items: center;
+
+    border-radius: 8px;
+    border: 1px solid $colorTheme;
+    padding: 2vw;
+    margin: 1vh;
+    width: 20vw;
+    height: 20vw ;
+    img
+    {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
 
 @media (min-width:1280px) {
 
@@ -272,7 +316,11 @@ button
     }
   }
 
+  .clients-list .item
+  {
+    width: 40vw;
 
+  }
 
 }
 

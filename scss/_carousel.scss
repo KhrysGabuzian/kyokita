@@ -39,6 +39,19 @@
 
 .owl-carousel .owl-item{
   float: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  -webkit-align-items: center;
+  align-items: center;
+
 }
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
