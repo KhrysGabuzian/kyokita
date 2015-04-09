@@ -219,13 +219,17 @@
 
 @media screen and (max-width: 640px) {
 
+  .home h5 {
+    margin-top: 2em;
+  }
+
   .ch-grid {
-    padding: 10% 0;
+    padding: 0;
     li {
-      width: 112px;
-      height: 112px;
+      width: 98px;
+      height: 98px;
       display: inline-block;
-      margin: 5px;
+      margin: 3px
     }
   }
 
@@ -238,7 +242,7 @@
     height: 13vh;
     margin-top: 2px;
     font-size: 6vw;
-    padding: 3%;
+    padding: 1%;
   }
 
   .contact .border-block

@@ -158,6 +158,19 @@ button
 
     .list
     {
+
+        -webkit-align-items: stretch;
+        align-items: stretch;
+
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+
+        display: -webkit-flex; /* Safari */
+        -webkit-justify-content: space-around; /* Safari 6.1+ */
+        display: flex;
+        justify-content: space-around;
+
       li
       {
         list-style-type: disc;
@@ -373,10 +386,6 @@ footer
   }
 }
 
-@media (min-width:1280px) {
-
-}
-
 @media (max-width:1280px) {
 
 
@@ -424,6 +433,15 @@ footer
     font-size: 1em;
     line-height: 1.3em;
   }
+  .contact .border-block {
+    padding: 1%;
+  }
+
+  .contact .block-left,
+  .projects .block-left {
+    padding: 2% 4%;
+  }
+
   .reveal h2 {
     font-size: 1.3em;
   }
@@ -436,7 +454,7 @@ footer
   .projects-block h3,
   .projects-block h4
   {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
     .home .presentation li .ch-item>h3
@@ -456,6 +474,18 @@ footer
   }
   .contact address, .projects address {
     padding: 0 3%;
+  }
+  footer
+  {
+    .footer-logo
+    {
+      max-width: 100px;
+    }
+  }
+
+  .contact-btn
+  {
+    padding: 6px;
   }
 }
 
