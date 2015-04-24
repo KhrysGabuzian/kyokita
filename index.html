@@ -35,9 +35,9 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section  class="home-page">
-                    <a href="#/1/4" class="contact-btn">Rencontrons-nous</a>
-                    <section class="home">
+				<section class="home-page">
+                    <a href="#/contact" class="contact-btn">Rencontrons-nous</a>
+                    <section id="accueil" class="home" data-title="accueil">
                         <h1><img src="images/logo-kyokita.png" width="450"></h1>
                         <h2>Creators of Digital Unity</h2>
 
@@ -81,7 +81,7 @@
                         </ul>
 
                     </section>
-                    <section class="projects">
+                    <section id="projets" class="projects">
                         <h2></h2>
                         <div class="border-block">
                             <h2>Une équipe ...</h2>
@@ -102,7 +102,7 @@
                             <h4>Zen Sensor  / Recognize me / Bar connecté</h4>
                         </div>
                     </section>
-                    <section class="clients">
+                    <section id="clients" class="clients">
                         <h2>Ils nous font confiance</h2>
                         <div class="clients-list"> <!--id="clients" class="owl-carousel"-->
                             <div class="item"><img src="images/logos/bml.png" alt="BookMyLimo"></div>
@@ -115,7 +115,7 @@
                             <div class="item"><img src="images/logos/publicis.png" alt="PublicisGroup"></div>
                         </div>
                     </section>
-                    <section class="team">
+                    <section id="equipe" class="team">
                         <h2>The Team</h2>
                         <ul class="ch-grid">
                             <li>
@@ -193,7 +193,7 @@
                         </ul>
                     </section>
 
-                    <section class="contact">
+                    <section id="contact" class="contact">
                         <div class="border-block">
                             <h2>Contactez nous</h2>
 
@@ -244,8 +244,7 @@
 				transition: 'slide'
 			});
             Reveal.addEventListener( 'slidechanged', function( event ) {
-                // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-                // ga('send', 'event', 'Slide', 'click', event.currentSlide.className);
+                ga('send', 'pageview', window.location.hash);
             } );
 		</script>
 
@@ -274,6 +273,9 @@
         <script type="text/javascript">
             $('.contact-btn').on('click', function() {
                 ga('send', 'event', 'Rencontrer-nous', 'contact-btn');
+            });
+            $('.email-send').on('click', function() {
+                ga('send', 'event', 'Rencontrer-nous', 'mailto');
             });
         </script>
 
