@@ -29,7 +29,10 @@ button
   border: 0 none;
   @include border-radius(8px);
   padding: 10px 15px;
-}
+ }
+
+
+
 
 .contact-btn
 {
@@ -455,6 +458,9 @@ footer
     padding: 1%;
     font-size: 1em;
     line-height: 1.3em;
+    .list li{
+      font-size: 1.7em;
+    }
   }
   .contact .border-block {
     padding: 1%;
@@ -513,6 +519,12 @@ footer
   .contact-btn
   {
     padding: 6px;
+  }
+
+  .clients-list .item
+  {
+    width: 70vw;
+
   }
 }
 
