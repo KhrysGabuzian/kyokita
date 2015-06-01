@@ -226,8 +226,8 @@
   .ch-grid {
     padding: 0;
     li {
-      width: 45vw;
-      height: 45vw;
+      width: 36vw;
+      height: 36vw;
       display: inline-block;
       margin: 3px
     }
@@ -248,8 +248,9 @@
   .contact .border-block
   {
     h2 {
-      left: 3%;
+      left: 32%;
       font-size: 1.2em;
+
     }
     p {
        font-size: 1.2em;
@@ -261,5 +262,49 @@
     font-size: 1.1em;
     padding: 29px 0 0 0;
     height: 71px;
+  }
+}
+
+@media (orientation: landscape) and (max-device-width : 640px) {
+  .projects .border-block
+  {
+    height: 65vh;
+  }
+
+  .ch-grid {
+      li {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+  .ch-item {
+    -webkit-box-shadow: inset 0 0 0 8px rgba(255,255,255,0.6),0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+}
+
+
+@media (max-width:320px) {
+  .ch-item {
+    -webkit-box-shadow: inset 0 0 0 8px rgba(255,255,255,0.6),0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 0 8px rgba(255,255,255,0.6),0 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .home h5 {
+    margin-top: 1em;
+    font-size: 0.8em;
+  }
+  .projects .border-block, .contact .border-block {
+    h2, p {
+      font-size: 1em;
+    }
+    h2{
+      left: 24%;
+      padding-top: 1.5em;
+    }
+    .list li {
+      font-size: 1.2em;
+    }
   }
 }
