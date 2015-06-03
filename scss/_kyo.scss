@@ -69,9 +69,12 @@ button
   {
     padding: 0 0 0 70px;
   }
+  h2{
+    margin-top: 2em;
+  }
   h5
   {
-    margin-top: 5em;
+    margin-top: 4em;
     line-height: 1.5em;
   }
   .presentation
@@ -158,6 +161,149 @@ button
     height: 75px;
   }
 }
+
+.home-page {
+  .pictos {
+    li {
+      margin:0;
+     &:nth-child(2){
+        margin-top: 18px;
+      }
+      img {
+        margin: 0 10px;
+        width: 100px;
+      }
+      p{
+        margin:0 auto;
+        width: 100px;
+        font-family: $secondFont;
+        color:$headingColor;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0.8em;
+
+      }
+    }
+  }
+}
+
+// animation in circle
+
+
+.our-offer {
+  .schema {
+    width: 100%;
+    height: 500px;
+    padding-top: 20px;
+    background-color: $linkColor;
+
+    ul {
+      width: 20em;
+      top: 120px;
+      height: 20em;
+      border: 2px solid $circleColor;
+      border-radius: 50%;
+      position: relative;
+      margin: auto 0;
+
+      li {
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $circleColor;
+        vertical-align: middle;
+        font-size: 0.7em;
+        border: 2px solid #fff;
+        text-align: center;
+        img {
+          width: 60%;
+        }
+
+        &:after {
+          content: " ";
+          display: block;
+          width: 1px;
+          border-left: 2px solid white;
+          position: absolute;
+
+        }
+      }
+      .round1 {
+        transform: rotate(45deg) translate(-11em) rotate(-45deg);
+        &:after {
+          height: 45px;
+          transform: rotate(-42deg);
+          right: -5%;
+        }
+      }
+      .round2 {
+        transform: rotate(148deg) translate(-25em) rotate(-148deg);
+        &:after {
+          height: 61px;
+          transform: rotate(29deg);
+          left: 13%;
+          bottom: -55%;
+        }
+      }
+      .round3 {
+        transform: rotate(205deg) translate(-36em) rotate(-205deg);
+        &:after {
+          height: 53px;
+          transform: rotate(-73deg);
+          top: 3%;
+          left: -27%;
+        }
+      }
+      .round4 {
+        transform: rotate(120deg) translate(28em) rotate(-120deg);
+        &:after {
+          height: 86px;
+          transform: rotate(-119deg);
+          right: -36%;
+          top: -35%;
+        }
+      }
+      .round5{
+        transform: rotate(222deg) translate(-2.3em) rotate(-222deg);
+        background-color: $circleColor;
+        border: none;
+        width: 200px;
+        height: 200px;
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 200px;
+        vertical-align: middle;
+      }
+
+    }
+  }
+}
+
+//
+//.our-offer{
+//  ul{
+//    width: 100%;
+//    height: 500px;
+//    background-color: $linkColor;
+//    position: relative;
+//    li{
+//      position: absolute;
+//      width:150px;
+//      height:150px;
+//      border-radius: 50%;
+//      background-color: $circleColor;
+//      vertical-align: middle;
+//      font-size: 1em;
+//      border: 2px solid #fff;
+//      img{
+//        width:60%;
+//      }
+//    }
+//  }
+//}
+
 
   .border-block
   {

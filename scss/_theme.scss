@@ -18,6 +18,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Conv_Avenir';
+  src: url("fonts/AvenirLTStd-Roman.eot");
+  src: local('☺'), url("fonts/AvenirLTStd-Roman.woff") format("woff"), url("fonts/AvenirLTStd-Roman.ttf") format("truetype"), url("fonts/AvenirLTStd-Roman.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Default mixins and settings -----------------
 @mixin vertical-gradient( $top, $bottom ) {
   background: $top;
@@ -58,6 +66,7 @@
 $backgroundColor: #fff;
 
 $mainFont: 'Conv_Laoui', sans-serif;
+$secondFont: 'Conv_Avenir',sans-serif;
 $mainFontSize: 14px;
 $mainColor: #F2F2F2;
 
@@ -67,6 +76,9 @@ $blockMargin: 20px;
 // Links and actions
 $linkColor: #14A1BC;
 $linkColorHover: lighten( $linkColor, 20% );
+
+//schemas
+$circleColor:#1f497d;
 
 // Text selection
 $selectionBackgroundColor: #FF5E99;
