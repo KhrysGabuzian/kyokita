@@ -187,7 +187,7 @@ button
   }
 }
 
-// animation in circle
+// OUR OFFER animation in circle
 
 
 .our-offer {
@@ -217,9 +217,34 @@ button
         font-size: 0.7em;
         border: 2px solid #fff;
         text-align: center;
+        &:hover{
+          animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+          0% {
+            background-color: $circleColor;
+          }
+          100% {
+            background-color: #ce332d;
+          }
+        }
+
         img {
           width: 60%;
         }
+//        &:hover{
+//          animation: turn 3s infinite;
+//        }
+//
+//        @keyframes turn {
+//          0% {
+//            transform: rotate(45deg) translate(-11em) rotate(-45deg);
+//          }
+//          100% {
+//            transform: rotate(45deg) translate(-11em) rotate(315deg);
+//          }
+//        }
 
         &:after {
           content: " ";
@@ -230,79 +255,122 @@ button
 
         }
       }
-      .round1 {
-        transform: rotate(45deg) translate(-11em) rotate(-45deg);
-        &:after {
-          height: 45px;
-          transform: rotate(-42deg);
-          right: -5%;
-        }
-      }
-      .round2 {
-        transform: rotate(148deg) translate(-25em) rotate(-148deg);
-        &:after {
-          height: 61px;
-          transform: rotate(29deg);
-          left: 13%;
-          bottom: -55%;
-        }
-      }
-      .round3 {
-        transform: rotate(205deg) translate(-36em) rotate(-205deg);
-        &:after {
-          height: 53px;
-          transform: rotate(-73deg);
-          top: 3%;
-          left: -27%;
-        }
-      }
-      .round4 {
-        transform: rotate(120deg) translate(28em) rotate(-120deg);
-        &:after {
-          height: 86px;
-          transform: rotate(-119deg);
-          right: -36%;
-          top: -35%;
-        }
-      }
-      .round5{
-        transform: rotate(222deg) translate(-2.3em) rotate(-222deg);
-        background-color: $circleColor;
-        border: none;
-        width: 200px;
-        height: 200px;
-        text-transform: uppercase;
-        font-size: 24px;
-        line-height: 200px;
-        vertical-align: middle;
-      }
-
     }
   }
 }
 
-//
-//.our-offer{
-//  ul{
-//    width: 100%;
-//    height: 500px;
-//    background-color: $linkColor;
-//    position: relative;
-//    li{
-//      position: absolute;
-//      width:150px;
-//      height:150px;
-//      border-radius: 50%;
-//      background-color: $circleColor;
-//      vertical-align: middle;
-//      font-size: 1em;
-//      border: 2px solid #fff;
-//      img{
-//        width:60%;
-//      }
-//    }
-//  }
-//}
+@mixin line-position($line-height, $line-rotation, $line-left, $line-right, $line-top,
+$line-bottom){
+  height: $line-height;
+  transform: $line-rotation;
+  left: $line-left;
+  right:$line-right;
+  top:$line-top;
+  bottom: $line-bottom;
+}
+
+.our-offer .schema{
+  .round1 {
+    transform: rotate(45deg) translate(-11em) rotate(-45deg);
+
+
+    &:after {
+      @include line-position(45px,rotate(-42deg),"",-5%,"","");
+       }
+  }
+
+    .round2 {
+      transform: rotate(148deg) translate(-25em) rotate(-148deg);
+      &:after {
+        @include line-position(61px,rotate(29deg),13%,"","",-55%);
+      }
+    }
+    .round3 {
+      transform: rotate(205deg) translate(-36em) rotate(-205deg);
+      &:after {
+        @include line-position(53px,rotate(-73deg),-27%,"",3%,"");
+      }
+    }
+    .round4 {
+      transform: rotate(120deg) translate(28em) rotate(-120deg);
+      &:after {
+        @include line-position(86px,rotate(-119deg),"",-36%,-35%,"");
+      }
+    }
+}
+.our-offer .schema ul .round5{
+  transform: rotate(222deg) translate(-5.3em) rotate(-222deg);
+  background-color: $circleColor;
+  border: none;
+  width: 200px;
+  height: 200px;
+
+  img{
+    width: 26%;
+    margin-top: -47px;
+    margin-left: -8px;
+    vertical-align: top;
+
+  }
+  p{
+    line-height: 110px;
+    vertical-align: middle;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  p:nth-child(3){
+    font-size: 12px;
+    text-transform: none;
+  }
+  &:after{
+    content: " ";
+    position: absolute;
+    left: -21px;
+    top: -21px;
+    border-radius: 50%;
+    //        border: 1px solid white;
+    border-top-color: white;
+    width: 240px;
+    height: 240px;
+  }
+}
+
+//ARROW
+
+@mixin line-arrow($width-arrow, $rotate-deg, $color-arrow, $skew-deg, $border-width) /*54deg 20deg*/
+{
+  border-top: $border-width solid $color-arrow;
+  border-right: $border-width solid $color-arrow;
+  @include transform(rotate($rotate-deg) skew($skew-deg));
+  display: block;
+  font-size: 12px;
+  width:  $width-arrow;
+  height: $width-arrow;
+}
+
+.our-offer .schema ul .round6{
+  transform: rotate(222deg) translate(-5.3em) rotate(-46deg);
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  height: 200px;
+  text-transform: uppercase;
+
+
+  &:after{
+    content: " ";
+    position: absolute;
+    right: -21px;
+    bottom: -21px;
+    border-radius: 50%;
+    //        border: 1px solid white;
+    border-bottom-color: white;
+    width: 240px;
+    height: 240px;
+
+  }
+
+}
 
 
   .border-block
