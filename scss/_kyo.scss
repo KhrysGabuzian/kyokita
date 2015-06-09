@@ -290,6 +290,10 @@ $line-bottom){
       height: 35px;
          }
 
+    .description{
+      display: none;
+    }
+
     &:hover{
       .loading-icon,
       .loading-icon::before,
@@ -312,11 +316,13 @@ $line-bottom){
       .loading-icon::before {
         content: "";
         animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
         background:white;
       }
       .loading-icon::after {
         content: "";
         animation: bounce 2s -0.4s infinite;
+        -webkit-animation: bounce 2s -0.4s infinite;
         background: white;
       }
 
@@ -354,10 +360,23 @@ $line-bottom){
         linear-gradient(180deg, transparent 50%, $circleColor 50%),
         linear-gradient(90deg, $circleColor 50%, transparent 50%);
       }
-    }
-    }
 
-
+      .description {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 24%;
+        left: -112%;
+        width: 120px;
+        height: 75px;
+        padding: 10px;
+        border-radius: 7px;
+        font-size: 1em;
+        color: black;
+        transition: background 0.5s;
+      }
+    }
+  }
 }
 
 .our-offer .schema {
@@ -365,6 +384,9 @@ $line-bottom){
     transform: rotate(148deg) translate(-25em) rotate(-148deg);
     &:after {
       @include line-position(39px, rotate(29deg), 8%, "", "", -18%);
+    }
+    .description {
+      display: none;
     }
 
     &:hover{
@@ -379,6 +401,15 @@ $line-bottom){
       }
       .rect1 {
         top: 18%;
+        -webkit-animation: scroll1 1s infinite;
+        @-webkit-keyframes scroll1 {
+          0% {
+            top: 22%;
+          }
+          100% {
+            top: 24%;
+          }
+        }
         animation: scroll1 1s infinite;
         @keyframes scroll1 {
           0% {
@@ -400,9 +431,29 @@ $line-bottom){
             top: 28%;
           }
         }
+        -webkit-animation: scroll2 1s infinite;
+        @-webkit-keyframes scroll2 {
+          0% {
+            top: 26%;
+          }
+          100% {
+            top: 28%;
+          }
+        }
       }
       .rect3 {
         top: 26%;
+
+        -webkit-animation: scroll3 1s infinite;
+        @-webkit-keyframes scroll3 {
+          0% {
+            top: 30%;
+          }
+          100% {
+            top: 32%;
+          }
+        }
+
         animation: scroll3 1s infinite;
         @keyframes scroll3 {
           0% {
@@ -413,8 +464,20 @@ $line-bottom){
           }
         }
       }
-
-
+      .description {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top:10%;
+        left: 112%;
+        width: 150px;
+        height: 85px;
+        padding: 10px;
+        border-radius: 7px;
+        font-size: 1em;
+        color: black;
+        transition: background 0.5s;
+      }
     }
   }
 }
@@ -436,6 +499,9 @@ $line-bottom){
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      -ms-display: flex;
+      -ms-justify-content: space-between;
+      -ms-align-items: flex-start;
       -webkit-display: flex;
       -webkit-justify-content: space-between;
       -webkit-align-items: flex-start;
@@ -474,7 +540,6 @@ $line-bottom){
       transition: all 0.1s ease-in-out 0s;
       display: inline-block;
       vertical-align: middle;
-
     }
 
     .wrapper:hover .circle-line
@@ -483,79 +548,25 @@ $line-bottom){
       border-radius: 60%;
       height:12px;
     }
-//    &:hover{
-//      .loading-icon2,
-//      .loading-icon2::before,
-//      .loading-icon2::after,
-//      .loading-icon3,
-//      .loading-icon3::before,
-//      .loading-icon3::after,{
-//
-//        margin-left: -30px;
-//        margin-top: -30px;
-//        position: absolute;
-//        vertical-align: middle;
-//        background: transparent;
-//        width: 6px;
-//        height: 6px;
-//        border-radius: 50%;
-//        display: block;
-//        border: 0 none;
-//        transform: rotate(42deg) translate(4em);
-//
-//      }
-//      .loading-icon2,
-//      .loading-icon2::before,
-//      .loading-icon2::after{
-//        left: 58%;
-//        top: 61%;
-//      }
-//      .loading-icon3,
-//      .loading-icon3::before,
-//      .loading-icon3::after,{
-//        left: 45%;
-//        top: 61%;
-//      }
-//
-//      .loading-icon2::before,
-//      .loading-icon3::before{
-//        content: "";
-//        animation: bounce 1s infinite;
-//        background:white;
-//      }
-//      .loading-icon2::after,
-//      .loading-icon3::after{
-//        content: "";
-//        animation: bounce 1s -0.4s infinite;
-//        background: white;
-//      }
-//
-//      @keyframes bounce {
-//        0% {
-//          transform: scale(0.8);
-//          -webkit-transform: scale(0.8);
-//          opacity: 1;
-//        }
-//        100% {
-//          transform: scale(2);
-//          -webkit-transform: scale(2);
-//          opacity: 0;
-//        }
-//      }
-//
-//      @-webkit-keyframes bounce {
-//        0% {
-//          transform: scale(0.8);
-//          -webkit-transform: scale(0.8);
-//          opacity: 1;
-//        }
-//        100% {
-//          transform: scale(2);
-//          -webkit-transform: scale(2);
-//          opacity: 0;
-//        }
-//      }
-//    }
+    .description {
+      display: none;
+    }
+    &:hover{
+      .description {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 24%;
+        left: 112%;
+        width: 110px;
+        height: 65px;
+        padding: 10px;
+        border-radius: 7px;
+        font-size: 1em;
+        color: black;
+        transition: background 0.5s;
+      }
+    }
   }
 }
 
@@ -583,6 +594,10 @@ $line-bottom){
        &:after {
       @include line-position(64px, rotate(-132deg), "", -8%, -28%, "");
     }
+    .description {
+      display: none;
+    }
+
     &:hover{
       .desktop1{
         color:white;
@@ -601,6 +616,20 @@ $line-bottom){
             100%{color:rgba(255,255,255,0);}
           }
         }
+      }
+      .description {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        top: 24%;
+        left: -132%;
+        width: 150px;
+        height: 75px;
+        padding: 10px;
+        border-radius: 7px;
+        font-size: 1em;
+        color: black;
+        transition: background 0.5s;
       }
     }
   }
@@ -621,7 +650,7 @@ $line-bottom){
 
   }
   p{
-    line-height: 110px;
+    line-height: 135px;
     vertical-align: middle;
     font-size: 24px;
     text-transform: uppercase;
@@ -682,7 +711,7 @@ $line-bottom){
 
 //bloc texte offre
 
-
+/**/
 
 
   .border-block
