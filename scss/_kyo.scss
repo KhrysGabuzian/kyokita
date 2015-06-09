@@ -194,9 +194,9 @@ button
   .schema {
     width: 100%;
     height: 700px;
-    padding-top: 20px;
+    padding-top: 100px;
     background-color: $linkColor;
-    
+
 
     ul {
       width: 20em;
@@ -253,19 +253,49 @@ $line-bottom){
 
 .our-offer .schema{
   .round1 {
-    transform: rotate(45deg) translate(-11em) rotate(-45deg);
+    transform: rotate(45deg) translate(-15em) rotate(-45deg);
 
 
     &:after {
-      @include line-position(45px,rotate(-42deg),"",-5%,"","");
+      @include line-position(47px,rotate(-50deg),"",-7%,"","");
        }
+    .object {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      margin: 25px 0px -38px 38px;
+      position: relative;
+      border: 2px solid #FFF;
+      color: transparent;
+      padding-top: 2px;
+      padding-left: 2px;
+      transform: rotate(45deg);
+
+    }
+    .halfCircle,.halfCircle2 {
+      height: 17px;
+      width: 40px;
+      border-radius: 0 50px 50px 0;
+      border: 2px solid transparent;
+      border-right-color: white;
+      position: relative;
+  }
+    .halfCircle{
+      left: 44%;
+      top: 8%;
+    }
+    .halfCircle2{
+      left: 51%;
+      top: -13%;
+      height: 35px;
+         }
 
     &:hover{
       .loading-icon,
       .loading-icon::before,
       .loading-icon::after {
-        left: 53%;
-        top: 46%;
+        left: 55%;
+        top: 48%;
         margin-left: -30px;
         margin-top: -30px;
         position: absolute;
@@ -334,7 +364,7 @@ $line-bottom){
   .round2 {
     transform: rotate(148deg) translate(-25em) rotate(-148deg);
     &:after {
-      @include line-position(61px, rotate(29deg), 13%, "", "", -55%);
+      @include line-position(39px, rotate(29deg), 8%, "", "", -18%);
     }
 
     &:hover{
@@ -395,7 +425,7 @@ $line-bottom){
   .round3 {
     transform: rotate(205deg) translate(-36em) rotate(-205deg);
     &:after {
-      @include line-position(53px, rotate(-73deg), -27%, "", 3%, "");
+      @include line-position(53px, rotate(-73deg), -19%, "", 3%, "");
     }
     .wrapper
     {
@@ -406,6 +436,9 @@ $line-bottom){
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      -webkit-display: flex;
+      -webkit-justify-content: space-between;
+      -webkit-align-items: flex-start;
       position: relative;
       border: 2px solid rgb(255, 255, 255);
       padding: 9px 0px;
@@ -529,8 +562,46 @@ $line-bottom){
 .our-offer .schema {
   .round4 {
     transform: rotate(120deg) translate(28em) rotate(-120deg);
-    &:after {
-      @include line-position(86px, rotate(-119deg), "", -36%, -35%, "");
+    .desktop1{
+      width: 46px;
+      height: 49px;
+      border-radius: 9px;
+      margin: 25px 0px 3px 38px;
+      position: relative;
+      border: 2px solid #FFF;
+      color:transparent;
+      padding-top: 2px;
+      padding-left: 2px;
+    }
+    .desktop2{
+      width: 46px;
+      height: 12px;
+      border-radius: 5px;
+      border: 2px solid #FFF;
+      margin-left: 38px;
+    }
+       &:after {
+      @include line-position(64px, rotate(-132deg), "", -8%, -28%, "");
+    }
+    &:hover{
+      .desktop1{
+        color:white;
+        font-size: 1em;
+        span{
+          animation: clignote 1s infinite;
+          -webkit-animation: clignote 0.6s infinite;
+          @keyframes clignote {
+            0%{color:rgba(255,255,255,1);}
+            50%{color:rgba(255,255,255,0.5);}
+            100%{color:rgba(255,255,255,0);}
+          }
+          @-webkit-keyframes clignote {
+            0%{color:rgba(255,255,255,1);}
+            50%{color:rgba(255,255,255,0.5);}
+            100%{color:rgba(255,255,255,0);}
+          }
+        }
+      }
     }
   }
 }
