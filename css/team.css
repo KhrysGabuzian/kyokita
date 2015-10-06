@@ -1,0 +1,196 @@
+.ch-img-1 {
+  background-image: url(../images/team/DSC_0271.jpg); }
+
+.ch-img-2 {
+  background-image: url(../images/team/DSC_0295.jpg); }
+
+.ch-img-3 {
+  background-image: url(../images/team/DSC_0305.jpg); }
+
+.ch-img-4 {
+  background-image: url(../images/team/DSC_0324.jpg); }
+
+.ch-img-5 {
+  background-image: url(../images/team/DSC_0336.jpg); }
+
+.ch-img-6 {
+  background-image: url(../images/team/DSC_0350.jpg); }
+
+.ch-img-7 {
+  background-image: url(../images/team/DSC_0359-2.jpg); }
+
+.ch-img-8 {
+  background-image: url(../images/team/DSC_0371.jpg); }
+
+.ch-img-9 {
+  background-image: url(../images/team/DSC_0396.jpg); }
+
+.ch-grid {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  max-width: 95vw;
+  max-height: 80vh; }
+
+.ch-grid:after,
+.ch-item:before {
+  content: '';
+  display: table; }
+
+.ch-grid:after {
+  clear: both; }
+
+.ch-grid li {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 16px; }
+
+.ch-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+  background-size: cover; }
+
+.ch-info {
+  position: absolute;
+  background: rgba(68, 171, 197, 0.8);
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transform: scale(0);
+  -webkit-backface-visibility: hidden; }
+
+.ch-info h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 17px;
+  margin: 0 30px;
+  padding: 45px 0 0 0;
+  height: 100px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+.ch-info p {
+  color: #fff;
+  padding: 10px 5px;
+  font-style: italic;
+  margin: 0 30px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: all 1s ease-in-out 0.4s; }
+
+.ch-info p a {
+  display: block;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding-top: 4px;
+  font-family: 'Open Sans', Arial, sans-serif; }
+
+.ch-info p a:hover {
+  color: #EEEEF0; }
+
+.ch-item:hover {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.ch-item:hover .ch-info {
+  transform: scale(1);
+  opacity: 1; }
+
+.ch-item:hover .ch-info p {
+  opacity: 1; }
+
+@media (min-width: 1280px) {
+  .ch-grid li {
+    width: 220px;
+    height: 220px; } }
+@media (max-width: 1280px) {
+  .ch-grid {
+    max-width: 100vw; }
+    .ch-grid li {
+      width: 180px;
+      height: 180px; } }
+@media (max-width: 800px) {
+  .ch-grid li {
+    width: 180px;
+    height: 180px;
+    border-width: 3px; } }
+@media screen and (max-width: 1024px) {
+  .home h1 {
+    padding: 30px 0 0 70px; } }
+@media screen and (max-width: 640px) {
+  .home h5 {
+    margin-top: 2em; }
+
+  .ch-grid {
+    padding: 0; }
+    .ch-grid li {
+      width: 36vw;
+      height: 36vw;
+      display: inline-block;
+      margin: 3px; }
+
+  .ch-item {
+    box-shadow: inset 0 0 0 14px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+  .home .presentation li {
+    width: 100%;
+    height: 13vh;
+    margin-top: 2px;
+    font-size: 6vw;
+    padding: 1%; }
+
+  .contact .border-block h2 {
+    left: 32%;
+    font-size: 1.2em; }
+  .contact .border-block p {
+    font-size: 1.2em; }
+
+  .ch-info h3 {
+    letter-spacing: 1px;
+    margin: 0 12px;
+    font-size: 1.1em;
+    padding: 29px 0 0 0;
+    height: 71px; } }
+@media (orientation: landscape) and (max-device-width: 640px) {
+  .projects .border-block {
+    height: 65vh; }
+
+  .ch-grid li {
+    width: 20vw;
+    height: 20vw; }
+
+  .ch-item {
+    box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1); } }
+@media (max-width: 320px) {
+  .ch-item {
+    box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+  .home h5 {
+    margin-top: 1em;
+    font-size: 0.8em; }
+
+  .projects .border-block h2, .projects .border-block p, .contact .border-block h2, .contact .border-block p {
+    font-size: 1em; }
+  .projects .border-block h2, .contact .border-block h2 {
+    left: 24%;
+    padding-top: 1.5em; }
+  .projects .border-block .list li, .contact .border-block .list li {
+    font-size: 1.2em; } }
+
+/*# sourceMappingURL=team.css.map */

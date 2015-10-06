@@ -8,23 +8,36 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('node_modules/grunt/package.json'),
 
-        sass: {
+      /*  sass: {
             dist: {
-                /*options:{
+                /!*options:{
                     style:'compressed'
-                },*/
+                },*!/
                 files: {
                     'css/style.css' : 'scss/style.scss'
                 }
+            }
+        }*/
+        sass: {
+            src: {
+                files: [{
+                    expand: true,
+                    cwd: 'scss/',
+                    src: ['**/*.scss'],
+                    dest: 'css/',
+                    ext: '.css'
+                }]
             }
         },
         autoprefixer:{
             options: {
                 browsers: ['last 4 versions']
             },
-            single_file: {
-                src: 'css/style.css',
-                dest: 'css/style.css'
+            multiple_files: {
+                expand: true,
+                flatten: true,
+                src: 'css/*.css',
+                dest: 'css/'
             }/*,
             dist:{
                 files:{
