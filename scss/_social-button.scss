@@ -12,7 +12,7 @@
 }
 
 [class*=" icon-"], [class^=icon-] {
-    font-family: 'socialfont';
+    font-family: socialfont, sans-serif;
     speak: none;
     font-style: normal;
     font-weight: 400;
@@ -164,6 +164,7 @@ a.social-button.grey {
         transform: none;
     }
 }
+
 
 a.social-button.borderless {
     color: #4b4b4b;

@@ -27,7 +27,7 @@ $colorTheme: #14A1BC;
 button
 {
   border: 0 none;
-  @include border-radius(8px);
+  border-radius: 8px;
   padding: 10px 15px;
  }
 
@@ -43,12 +43,8 @@ button
   right: 1%;
   top: 1%;
   color: $colorTheme;
-  @include border-radius(8px);
+  border-radius: 8px;
   padding: 10px 15px;
-  -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -ms-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 
   cursor: pointer;
@@ -152,7 +148,7 @@ button
       .ch-item,
       .ch-info
       {
-        @include border-radius(0);
+        border-radius: 0;
       }
     }
   }
@@ -244,7 +240,7 @@ button
 @mixin line-position($line-height, $line-rotation, $line-left, $line-right, $line-top,
 $line-bottom){
   height: $line-height;
-  transform: $line-rotation;
+  transform:$line-rotation ;
   left: $line-left;
   right:$line-right;
   top:$line-top;
@@ -253,8 +249,7 @@ $line-bottom){
 
 .our-offer .schema{
   .round1 {
-    transform: rotate(45deg) translate(-15em) rotate(-45deg);
-
+    transform: rotate(45deg) translate(-15em) rotate(-45deg) ;
 
     &:after {
       @include line-position(47px,rotate(-50deg),"",-7%,"","");
@@ -316,41 +311,24 @@ $line-bottom){
       .loading-icon::before {
         content: "";
         animation: bounce 2s infinite;
-        -webkit-animation: bounce 2s infinite;
         background:white;
       }
       .loading-icon::after {
         content: "";
-        animation: bounce 2s -0.4s infinite;
-        -webkit-animation: bounce 2s -0.4s infinite;
+        animation : bounce 2s -0.4s infinite;
         background: white;
       }
 
       @keyframes bounce {
         0% {
           transform: scale(0.8);
-          -webkit-transform: scale(0.8);
           opacity: 1;
         }
         100% {
           transform: scale(2);
-          -webkit-transform: scale(2);
           opacity: 0;
         }
-      }
-
-      @-webkit-keyframes bounce {
-        0% {
-          transform: scale(0.8);
-          -webkit-transform: scale(0.8);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(2);
-          -webkit-transform: scale(2);
-          opacity: 0;
-        }
-      }
+      } ;
 
 
       .loading-icon.twentyfive,
@@ -373,7 +351,7 @@ $line-bottom){
         border-radius: 7px;
         font-size: 1em;
         color: black;
-        transition: background 0.5s;
+        transition : background 0.5s;
       }
     }
   }
@@ -401,16 +379,8 @@ $line-bottom){
       }
       .rect1 {
         top: 18%;
-        -webkit-animation: scroll1 1s infinite;
-        @-webkit-keyframes scroll1 {
-          0% {
-            top: 22%;
-          }
-          100% {
-            top: 24%;
-          }
-        }
         animation: scroll1 1s infinite;
+
         @keyframes scroll1 {
           0% {
             top: 22%;
@@ -423,6 +393,7 @@ $line-bottom){
       .rect2 {
         top: 22%;
         animation: scroll2 1s infinite;
+
         @keyframes scroll2 {
           0% {
             top: 26%;
@@ -431,7 +402,7 @@ $line-bottom){
             top: 28%;
           }
         }
-        -webkit-animation: scroll2 1s infinite;
+
         @-webkit-keyframes scroll2 {
           0% {
             top: 26%;
@@ -443,17 +414,6 @@ $line-bottom){
       }
       .rect3 {
         top: 26%;
-
-        -webkit-animation: scroll3 1s infinite;
-        @-webkit-keyframes scroll3 {
-          0% {
-            top: 30%;
-          }
-          100% {
-            top: 32%;
-          }
-        }
-
         animation: scroll3 1s infinite;
         @keyframes scroll3 {
           0% {
@@ -463,6 +423,7 @@ $line-bottom){
             top: 32%;
           }
         }
+
       }
       .description {
         display: block;
@@ -499,16 +460,11 @@ $line-bottom){
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      -ms-display: flex;
-      -ms-justify-content: space-between;
-      -ms-align-items: flex-start;
-      -webkit-display: flex;
-      -webkit-justify-content: space-between;
-      -webkit-align-items: flex-start;
       position: relative;
       border: 2px solid rgb(255, 255, 255);
-      padding: 9px 0px;
+      padding: 9px 4px;
     }
+
     .wrapper:before,
     .wrapper:after
     {
@@ -521,6 +477,7 @@ $line-bottom){
       position: absolute;
       top: 12%;
     }
+
     .wrapper:before
     {
       border-radius: 40px 0 0 40px;
@@ -572,12 +529,13 @@ $line-bottom){
 
 .our-offer .schema {
   .round4 {
-    transform: rotate(120deg) translate(28em) rotate(-120deg);
+    transform:rotate(120deg) translate(28em) rotate(-120deg);
+
     .desktop1{
       width: 46px;
       height: 49px;
       border-radius: 9px;
-      margin: 25px 0px 3px 38px;
+      margin: 25px 0 3px 38px;
       position: relative;
       border: 2px solid #FFF;
       color:transparent;
@@ -604,7 +562,6 @@ $line-bottom){
         font-size: 1em;
         span{
           animation: clignote 1s infinite;
-          -webkit-animation: clignote 0.6s infinite;
           @keyframes clignote {
             0%{color:rgba(255,255,255,1);}
             50%{color:rgba(255,255,255,0.5);}
@@ -649,23 +606,27 @@ $line-bottom){
     vertical-align: top;
 
   }
+
   p{
     line-height: 135px;
     vertical-align: middle;
     font-size: 24px;
     text-transform: uppercase;
+
+    &:nth-child(3)
+    {
+      font-size: 12px;
+      text-transform: none;
+    }
+
   }
-  p:nth-child(3){
-    font-size: 12px;
-    text-transform: none;
-  }
+
   &:after{
     content: " ";
     position: absolute;
     left: -21px;
     top: -21px;
     border-radius: 50%;
-    //        border: 1px solid white;
     border-top-color: white;
     width: 240px;
     height: 240px;
@@ -673,12 +634,11 @@ $line-bottom){
 }
 
 //ARROW
-
 @mixin line-arrow($width-arrow, $rotate-deg, $color-arrow, $skew-deg, $border-width) /*54deg 20deg*/
 {
   border-top: $border-width solid $color-arrow;
   border-right: $border-width solid $color-arrow;
-  @include transform(rotate($rotate-deg) skew($skew-deg));
+  transform: rotate($rotate-deg) skew($skew-deg);
   display: block;
   font-size: 12px;
   width:  $width-arrow;
@@ -704,16 +664,11 @@ $line-bottom){
     border-bottom-color: white;
     width: 240px;
     height: 240px;
-
   }
-
 }
 
 //bloc texte offre
-
 /**/
-
-
   .border-block
   {
     display: flex;
@@ -728,16 +683,8 @@ $line-bottom){
 
     .list
     {
-
-        -webkit-align-items: stretch;
         align-items: stretch;
-
-        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
-
-
-        display: -webkit-flex; /* Safari */
-        -webkit-justify-content: space-around; /* Safari 6.1+ */
         display: flex;
         justify-content: space-around;
 
@@ -749,12 +696,7 @@ $line-bottom){
       }
     }
 
-
-
   }
-
-
-
 
 .projects-block
 {
@@ -886,36 +828,17 @@ $line-bottom){
 
 .clients-list
 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-
-  -moz-justify-content: space-around;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-
-  -webkit-flex-wrap: wrap;
+  justify-content: space-around ;
   flex-wrap: wrap;
-
   margin-top: 3vh;
 
   .item
   {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+
     display: flex;
-
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
     justify-content: center;
-
-    -webkit-align-items: center;
     align-items: center;
-
     border-radius: 8px;
     border: 1px solid $colorTheme;
     padding: 2vw;
@@ -1105,7 +1028,7 @@ footer
     font-size: 1em;
   }
   .ch-item {
-    box-shadow: inset 0 0 0 8px rgba(255,255,255,0.6),0 1px 2px rgba(0,0,0,0.1);
+    box-shadow : inset 0 0 0 8px rgba(255,255,255,0.6),0 1px 2px rgba(0,0,0,0.1) ;
   }
 
 }
