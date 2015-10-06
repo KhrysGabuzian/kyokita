@@ -1566,7 +1566,7 @@ button {
     width: 20em;
     top: 120px;
     height: 20em;
-    border: 2px solid #1f497d;
+    /* border: 2px solid $circleColor;*/
     border-radius: 50%;
     position: relative;
     margin: auto 0; }
